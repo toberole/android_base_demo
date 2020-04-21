@@ -1,0 +1,7 @@
+package com.xiaoge.org.data_structure.btree2;
+
+public class TreeNode {
+    public Integer val;
+    public TreeNode left;
+    public TreeNode right;
+}

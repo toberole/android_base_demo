@@ -1,0 +1,42 @@
+[
+{
+	"name": "hello1",
+	"img":"https://img-blog.csdnimg.cn/20191211154952498.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3NDk1NDA=,size_16,color_FFFFFF,t_70",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+	"name": "hello2",
+	"img":"https://img-blog.csdnimg.cn/20191211154952498.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3NDk1NDA=,size_16,color_FFFFFF,t_70",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+	"name": "hello3",
+	"img":"https://img-blog.csdnimg.cn/20191210182300733.png",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+	"name": "hello4",
+	"img":"https://img-blog.csdnimg.cn/20191210182314822.png",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+	"name": "hello5",
+	"img":"https://img-blog.csdnimg.cn/20191210182332252.png",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+	"name": "hello6",
+	"img":"https://img-blog.csdnimg.cn/20191210182332252.png",
+	"apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+    "name": "hello7",
+    "img":"https://img-blog.csdnimg.cn/20191210182332252.png",
+    "apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+},
+{
+     "name": "hello7",
+     "img":"https://img-blog.csdnimg.cn/20191210182332252.png",
+     "apk":"https://github.com/toberole/jni_xxxx_demo/blob/master/test_data/file/app1.data"
+}
+]

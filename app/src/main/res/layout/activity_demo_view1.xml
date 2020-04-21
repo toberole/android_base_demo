@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.xiaoge.org.activity.demo.DemoViewActivity1">
+
+    <com.xiaoge.org.view_study.CircleView
+        android:id="@+id/cv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@android:color/darker_gray"
+        android:padding="20dp"
+        app:color="#FF8866"
+        app:u_h="200dp"
+        app:u_w="200dp" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+简化版的Dagger实现依赖注入的几个必要条件：
+1、第三方库通过Modules的@provides注解来提供依赖
+2、提供一个全局唯一的Component，并且Modules中需要添加AndroidSupportInjectionModule类，它的作用时关联需求与依赖之间的关系
+3、Application需要继承DaggerApplication类，并且在applicationInjector构建并返回全剧唯一的Component实例
+4、其它需要使用依赖注入的组建都需要继承Dagger组件名字类[自己实现接口也可以]，并且需要在相应的Modules中通过@ContributesAndroidInjector注解标记需要注入依赖的组建。

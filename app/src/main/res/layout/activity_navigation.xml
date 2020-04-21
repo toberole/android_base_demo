@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xiaoge.org.navigation.NavigationActivity">
+    <!--
+        app:defaultNavHost="true"这个属性意味着你的NavGraphFragment
+        将会 拦截系统Back键的点击事件（因为系统的back键会直接关闭Activity而非切换Fragment），
+        你同时 必须重写 Activity的 onSupportNavigateUp() 方法
+    -->
+
+    <!--在Activity的布局文件中显示声明NavFragment，并配置 app:defaultNavHost 和 app:navGraph属性。-->
+
+    <fragment
+        android:id="@+id/my_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.xiaoge.org.activity.demo.JNIActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test" />
+
+        <Button
+            android:id="@+id/btn_test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test1" />
+
+        <Button
+            android:id="@+id/btn_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test2" />
+
+        <Button
+            android:id="@+id/btn_test3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test3" />
+
+        <Button
+            android:id="@+id/data_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test" />
+
+        <Button
+            android:id="@+id/data_test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test1" />
+
+        <Button
+            android:id="@+id/data_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test2" />
+
+        <Button
+            android:id="@+id/data_test3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test3" />
+
+        <Button
+            android:id="@+id/data_test4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test4" />
+
+        <Button
+            android:id="@+id/data_test5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5" />
+
+        <Button
+            android:id="@+id/data_test5_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_1" />
+
+        <Button
+            android:id="@+id/data_test5_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_2" />
+
+        <Button
+            android:id="@+id/data_test5_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_3" />
+
+        <Button
+            android:id="@+id/data_test5_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_4" />
+
+        <Button
+            android:id="@+id/data_test5_4_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_4_1" />
+
+        <Button
+            android:id="@+id/data_test5_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test5_5" />
+
+        <Button
+            android:id="@+id/data_test6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test6" />
+
+        <Button
+            android:id="@+id/data_test7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test7" />
+
+        <Button
+            android:id="@+id/data_test8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test8" />
+
+        <Button
+            android:id="@+id/data_test9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test9" />
+
+        <Button
+            android:id="@+id/data_test10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test10" />
+
+        <Button
+            android:id="@+id/data_test11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test11" />
+
+        <Button
+            android:id="@+id/data_test12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test12" />
+
+        <Button
+            android:id="@+id/data_test13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test13" />
+
+        <Button
+            android:id="@+id/data_test14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test14" />
+
+        <Button
+            android:id="@+id/data_test14_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="data_test14_1" />
+
+        <Button
+            android:id="@+id/test_fork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test_fork" />
+
+        <Button
+            android:id="@+id/native_load_so"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="native_load_so" />
+
+
+    </LinearLayout>
+</ScrollView>

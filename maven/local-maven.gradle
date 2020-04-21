@@ -1,0 +1,48 @@
+apply plugin: 'maven'
+
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            // 仓库地址
+            repository(url: "http://127.0.0.1:8081/nexus/repository/maven-releases/") {
+                // 用户名和密码
+                authentication(userName: "deployment", password: "deployment123")
+            }
+
+            pom.groupId = 'com.coral.banner'
+            pom.artifactId = 'bannerwrapperview'
+            pom.version = '0.0.1'
+
+            pom.project {
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 上传到内部私服maven仓库（nexus搭建）命令：gradle uploadArchives

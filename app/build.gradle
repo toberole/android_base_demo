@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.jakewharton.butterknife'
+
+apply plugin: 'androidx.navigation.safeargs'
+
+///////////////////////引用自定义插件 //////////////////////////
+// 第一种写法
+// 'com.cat.zeus.gradle'名字与properties必须一致
+apply plugin: 'com.cat.zeus.gradle'
+// 第二种写法
+// apply plugin: com.cat.zeus.plugin.CreateJavaPlugin
+
+//CostTime {
+//    costTimePackageName = 'com.zhouwei.helloapt'
+//}
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "aaa.com.android.org"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++14"
+//                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+//        cmake {
+//            version "3.10.2"
+//        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    // 支持java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    // https://mvnrepository.com/artifact/androidx.asynclayoutinflater/asynclayoutinflater
+    implementation group: 'androidx.asynclayoutinflater', name: 'asynclayoutinflater', version: '1.0.0'
+
+    // navigation
+    def nav_version = "2.1.0"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Lifecycle
+    def lifecycle_version = "2.1.0"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    // AndroidX libraries use this lightweight import for Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    // rxandroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.8"
+
+    // butterknife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /////////////////////////// kotlin /////////////////////////////
+    // 标准库
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // 反射
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    // 协程
+    compile group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-android', version: '1.2.2'
+
+    // 使用apt
+    annotationProcessor project(path: ':apt_processor')
+    compile project(path: ':apt_annotation')
+    annotationProcessor project(path: ':apt1')
+
+    compile project(path: ':anno_apt_apis')
+    compile project(path: ':baselib')
+    compile project(path: ':media')
+}
+
+
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activity.demo0.MainActivity">
+
+    <Button
+
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="btn_jni" />
+
+    <Button
+        android:id="@+id/btn_bind_serice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bind_service" />
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_add_user" />
+
+    <Button
+        android:id="@+id/btn_get_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_get_users" />
+
+
+    <Button
+        android:id="@+id/btn_unregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_unregister" />
+
+
+</LinearLayout>

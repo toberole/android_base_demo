@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.rxjava_activitys.RxJavaActivity">
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/btn_start1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start1" />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_create" />
+
+    <Button
+        android:id="@+id/btn_consumer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_consumer" />
+
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_map" />
+
+    <Button
+        android:id="@+id/btn_flatMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_flatMap" />
+
+
+</LinearLayout>

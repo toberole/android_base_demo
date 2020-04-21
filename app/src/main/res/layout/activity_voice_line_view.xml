@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.demo0.VoiceLineViewActivity">
+
+    <com.xiaoge.org.views.VoiceLineView
+        android:id="@+id/voicLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:fineness="three"
+        app:maxVolume="100"
+        app:middleLine="@android:color/holo_red_light"
+        app:middleLineHeight="1dp"
+        app:rectSpace="2dp"
+        app:rectWidth="5dp"
+        app:sensibility="four"
+        app:viewMode="line"
+        app:voiceLine="@android:color/holo_red_light" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="start" />
+
+</RelativeLayout>

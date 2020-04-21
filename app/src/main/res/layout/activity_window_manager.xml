@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaoge.org.activity.demo.WindowManagerActivity">
+
+    <Button
+        android:id="@+id/btn_wm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_wm" />
+
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模拟Toast" />
+
+    <Button
+        android:id="@+id/btn_toast_50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模拟Toast DOS" />
+
+    <Button
+        android:id="@+id/btn_toast_aysn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="非UI线程Toast" />
+
+    <Button
+        android:id="@+id/btn_NonUiThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="非UI线程添加View" />
+
+</LinearLayout>
