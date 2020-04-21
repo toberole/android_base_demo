@@ -33,6 +33,11 @@ import com.xiaoge.org.activity.demo0.DrawActivity;
 import com.xiaoge.org.activity.demo0.MainActivity;
 import com.xiaoge.org.activity.demo0.SinLineViewActivity;
 import com.xiaoge.org.activity.demo0.TestServiceActivity;
+import com.xiaoge.org.base_test.ActivityLifeTest;
+import com.xiaoge.org.base_test.ActivityLifeTest1;
+import com.xiaoge.org.base_test.DispatchTouchEventActivity;
+import com.xiaoge.org.base_test.MyViewPagerActivity;
+import com.xiaoge.org.kotlin.demo.MyTest;
 import com.xiaoge.org.lifecycle.LifecycleActivity;
 import com.xiaoge.org.activity.kotlin.DemoKotlinActivity_1;
 import com.xiaoge.org.activity.kotlin.HelloKotlinActivity;
@@ -42,6 +47,9 @@ public class TestIndex {
     public static int test_page = 0;
 
     public static Class[] clazzs = new Class[]{//
+            MyViewPagerActivity.class,
+            DispatchTouchEventActivity.class,
+            ActivityLifeTest1.class,
             com.xiaoge.org.activity.demo1.ConstraintlayoutActivity.class,
             LifecycleActivity.class,
             NavigationActivity.class,

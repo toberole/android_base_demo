@@ -23,7 +23,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lifecycle.LoginActivity"></activity>
+        <activity android:name=".base_test.MyViewPagerActivity"/>
+        <activity android:name=".base_test.DispatchTouchEventActivity" />
+        <activity
+            android:name=".base_test.ActivityLifeTest"
+            android:configChanges="orientation|screenSize|keyboard" />
+        <activity
+            android:name=".base_test.ActivityLifeTest1"
+            android:configChanges="orientation|screenSize|keyboard" />
+        <activity android:name=".lifecycle.LoginActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
