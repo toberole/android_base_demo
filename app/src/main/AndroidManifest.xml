@@ -23,7 +23,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base_test.MyViewPagerActivity"/>
+        <activity android:name=".base_test.ViewDragHelper_ViewActivity"></activity>
+        <activity android:name=".base_test.LaunchModeActivity2" />
+        <activity android:name=".base_test.LaunchModeActivity1" />
+        <activity
+            android:name=".base_test.ActivityLifeTest2"
+            android:theme="@style/Transparent" />
+        <activity android:name=".base_test.DialogActivityLife" />
+        <activity android:name=".base_test.MyViewPagerActivity" />
         <activity android:name=".base_test.DispatchTouchEventActivity" />
         <activity
             android:name=".base_test.ActivityLifeTest"
@@ -32,9 +39,6 @@
             android:name=".base_test.ActivityLifeTest1"
             android:configChanges="orientation|screenSize|keyboard" />
         <activity android:name=".lifecycle.LoginActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".activity.demo1.ConstraintlayoutActivity" />
