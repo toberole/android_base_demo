@@ -5,7 +5,9 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+
 import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -125,6 +127,11 @@ public class M_View extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        float rawX = event.getRawX();
+        float rawY = event.getRawY();
+        float x = event.getX();
+        float y = event.getY();
+
         return super.onTouchEvent(event);
     }
 }

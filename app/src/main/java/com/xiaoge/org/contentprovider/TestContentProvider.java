@@ -1,4 +1,4 @@
-package com.xiaoge.org;
+package com.xiaoge.org.contentprovider;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

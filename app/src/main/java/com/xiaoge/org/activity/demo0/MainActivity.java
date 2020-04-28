@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private BusHandler busHandler;
 
-    // 注册给aidl服务端回调 注意写法 IOnNewUserAdded.Stub
+    // 注册给aidl服务端回调
+    // 注意写法 IOnNewUserAdded.Stub
     private IOnNewUserAdded listener = new IOnNewUserAdded.Stub() {
         @Override
         public void onAddUser(User u) throws RemoteException {

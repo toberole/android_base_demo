@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base_test.ViewDragHelper_ViewActivity"></activity>
+        <activity android:name=".base_test.ThreadActivity"/>
+        <activity android:name=".base_test.ViewDragHelper_ViewActivity" />
         <activity android:name=".base_test.LaunchModeActivity2" />
         <activity android:name=".base_test.LaunchModeActivity1" />
         <activity
@@ -126,7 +127,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
         <provider
-            android:name=".TestContentProvider"
+            android:name=".contentprovider.TestContentProvider"
             android:authorities="com.xiaoge.org"
             android:process="com.sogou.cp" />
 

@@ -1,7 +1,11 @@
 package com.xiaoge.org.base_test
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.View
 import com.xiaoge.org.R
 import com.xiaoge.org.util.LogUtil
 
@@ -14,6 +18,25 @@ class ActivityLifeTest2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_life_test2)
         LogUtil.i(TAG, "onCreate")
+    }
+
+    private fun test() {
+        var intent = Intent()
+        intent.resolveActivity(null)
+        var sp = getSharedPreferences("", Context.MODE_PRIVATE)
+        sp.edit().putBoolean("", true).commit()
+        // var msg = Messenger()
+//        contentResolver.query()
+//        ValueAnimator.ofFloat(1f,10f).addUpdateListener {
+//            it.animatedValue
+//        }
+
+//        var v: View? = null
+//        v.x
+
+        var v: View? = null
+
+        // Thread(null).start()
     }
 
     override fun onStart() {
@@ -49,5 +72,9 @@ class ActivityLifeTest2 : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         LogUtil.i(TAG, "onDestroy")
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        return super.dispatchTouchEvent(ev)
     }
 }
