@@ -101,6 +101,13 @@ public class FragmentActivity2 extends AppCompatActivity {
         fragmentManager.beginTransaction()
                 .replace(R.id.fl_container, fragment2, "f2")
                 .commit();
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.fl_container, fragment2, "f2")// 用fragment2替换掉tag为f2的fragment
+                .add(R.id.fl_container, fragment2, "f2")// 添加fragment 并且赋予tag为f2
+                .remove(fragment2)// 移除fragment
+                .addToBackStack("f2")// 操作添加到回退栈
+                .commit();
     }
 
     @OnClick(R.id.btn_3)

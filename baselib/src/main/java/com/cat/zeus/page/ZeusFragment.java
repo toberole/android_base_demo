@@ -1,23 +1,20 @@
 package com.cat.zeus.page;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.cat.zeus.utils.APT;
-import com.cat.zeus.utils.ZeusLog;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class ZeusFragment extends Fragment {
-    public static final String TAG = ZeusFragment.class.getSimpleName();
-
     protected Activity activity;
 
     public static <T extends Fragment> T newInstance(@NonNull Class<? extends Fragment> clazz, Bundle args) {
@@ -48,14 +45,13 @@ public class ZeusFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        ZeusLog.i(TAG, "onAttach context: " + context);
         this.activity = (Activity) context;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ZeusLog.i(TAG, "onCreate");
+        Log.i(this.getClass().getSimpleName(), "onCreate");
     }
 
     @Nullable
@@ -66,55 +62,65 @@ public class ZeusFragment extends Fragment {
             layout = setLayout();
         }
 
-        ZeusLog.i(TAG, "onCreateView layout: " + layout);
-
         View v = setLayoutView();
         if (0 != layout) {
             v = inflater.inflate(layout, container, false);
         }
-        ZeusLog.i(TAG, "onCreateView");
+        Log.i(this.getClass().getSimpleName(), "onCreateView");
         return v;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ZeusLog.i(TAG, "onViewCreated");
+        Log.i(this.getClass().getSimpleName(), "onViewCreated");
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.i(this.getClass().getSimpleName(), "onActivityCreated");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        ZeusLog.i(TAG, "onStart");
+        Log.i(this.getClass().getSimpleName(), "onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ZeusLog.i(TAG, "onResume");
+        Log.i(this.getClass().getSimpleName(), "onResume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        ZeusLog.i(TAG, "onPause");
+        Log.i(this.getClass().getSimpleName(), "onPause");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        ZeusLog.i(TAG, "onStop");
+        Log.i(this.getClass().getSimpleName(), "onStop");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ZeusLog.i(TAG, "onDestroyView");
+        Log.i(this.getClass().getSimpleName(), "onDestroyView");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        ZeusLog.i(TAG, "onDestroy");
+        Log.i(this.getClass().getSimpleName(), "onDestroy");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.i(this.getClass().getSimpleName(), "onDetach");
     }
 }

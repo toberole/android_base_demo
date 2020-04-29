@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base_test.RecyclerViewActivity"/>
+        <activity android:name=".activity.demo.FragmentActivity3"></activity>
+        <activity android:name=".base_test.RecyclerViewActivity" />
         <activity android:name=".base_test.ThreadActivity" />
         <activity android:name=".base_test.ViewDragHelper_ViewActivity" />
         <activity android:name=".base_test.LaunchModeActivity2" />

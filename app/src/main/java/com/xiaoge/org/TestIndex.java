@@ -13,6 +13,7 @@ import com.xiaoge.org.activity.demo.FindViewByPositionActivity;
 import com.xiaoge.org.activity.demo.FragmentActivity;
 import com.xiaoge.org.activity.demo.FragmentActivity1;
 import com.xiaoge.org.activity.demo.FragmentActivity2;
+import com.xiaoge.org.activity.demo.FragmentActivity3;
 import com.xiaoge.org.activity.demo.IntentServiceActivity;
 import com.xiaoge.org.activity.demo.JNIActivity;
 import com.xiaoge.org.activity.demo.LifeActivity;
@@ -53,6 +54,8 @@ public class TestIndex {
     public static int test_page = 0;
 
     public static Class[] clazzs = new Class[]{//
+            RecyclerViewActivity.class,
+            FragmentActivity3.class,
             FragmentActivity2.class,
             RecyclerViewActivity.class,
             ThreadActivity.class,
