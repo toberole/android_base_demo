@@ -25,6 +25,9 @@ import kotlinx.android.synthetic.main.activity_recycler_view.*
  * RecyclerView比ListView多两级缓存，
  * 支持多个离屏ItemView缓存，支持开发者自定义缓存处理逻辑，
  * 支持所有RecyclerView共用同一个RecyclerViewPool(缓存池)。
+ *
+ * RecyclerView由layoutManager，Adapter，ItemAnimator，ItemDecoration，ViewHolder五大核心组件。
+ * 五个组件分别负责不同的功能，组合成为功能强大拓展性强的RecyclerView。
  */
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var adapte: TestAdapter

@@ -65,6 +65,7 @@ class FragmentActivity3 : AppCompatActivity(), View.OnClickListener {
         supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fl_container, f3, "f3")
+
                 .commit()
     }
 
