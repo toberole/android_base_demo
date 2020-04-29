@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import android.widget.LinearLayout
 import com.xiaoge.org.R
 import com.xiaoge.org.util.LogUtil
+import com.xiaoge.org.view_study.LinearLayout_Scroll
 
 class ActivityLifeTest2 : AppCompatActivity() {
     companion object {
@@ -37,6 +39,8 @@ class ActivityLifeTest2 : AppCompatActivity() {
         var v: View? = null
 
         // Thread(null).start()
+
+        var l = LinearLayout(null)
     }
 
     override fun onStart() {

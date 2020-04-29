@@ -40,6 +40,7 @@ import com.xiaoge.org.base_test.DialogActivityLife;
 import com.xiaoge.org.base_test.DispatchTouchEventActivity;
 import com.xiaoge.org.base_test.LaunchModeActivity1;
 import com.xiaoge.org.base_test.MyViewPagerActivity;
+import com.xiaoge.org.base_test.RecyclerViewActivity;
 import com.xiaoge.org.base_test.ThreadActivity;
 import com.xiaoge.org.base_test.ViewDragHelper_ViewActivity;
 import com.xiaoge.org.kotlin.demo.MyTest;
@@ -52,6 +53,8 @@ public class TestIndex {
     public static int test_page = 0;
 
     public static Class[] clazzs = new Class[]{//
+            FragmentActivity2.class,
+            RecyclerViewActivity.class,
             ThreadActivity.class,
             ViewDragHelper_ViewActivity.class,
             LaunchModeActivity1.class,

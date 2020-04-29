@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Debug;
 import android.os.Environment;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.cat.zeus.page.ZeusFragment;
@@ -26,7 +27,7 @@ import java.io.File;
 public class FragmentActivity1 extends AppCompatActivity {
     public static final String TAG = "Fragment1";
 
-    private LinearLayout ll_container;
+    private FrameLayout fl_container;
 
     @Override
     protected void onStart() {
@@ -62,7 +63,7 @@ public class FragmentActivity1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment1);
-        ll_container = findViewById(R.id.ll_container);
+        fl_container = findViewById(R.id.fl_container);
         LogUtil.i(TAG, "FragmentActivity1#onCreate");
         ButterKnife.bind(this);
         // 统计调用时间
@@ -95,14 +96,14 @@ public class FragmentActivity1 extends AppCompatActivity {
 //        Fragment f = new Fragment1();
 //        fragmentManager.
 //                beginTransaction()
-//                .replace(R.id.ll_container, f, "f1")
+//                .replace(R.id.fl_container, f, "f1")
 //                .commit();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment2 f = ZeusFragment.newInstance(Fragment2.class);
         fragmentManager.
                 beginTransaction()
-                .replace(R.id.ll_container, f, "f1")
+                .replace(R.id.fl_container, f, "f1")
                 .commit();
     }
 

@@ -1,6 +1,7 @@
 package com.xiaoge.org.activity.demo;
 
 import android.os.Bundle;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.xiaoge.org.R;
@@ -27,7 +28,7 @@ import butterknife.OnClick;
 public class FragmentActivity2 extends AppCompatActivity {
     public static final String TAG = "Fragment1";
 
-    private LinearLayout ll_container;
+    private FrameLayout fl_container;
     private FragmentManager fragmentManager;
     private Fragment fragment1;
     private Fragment fragment2;
@@ -66,7 +67,7 @@ public class FragmentActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment1);
-        ll_container = findViewById(R.id.ll_container);
+        fl_container = findViewById(R.id.fl_container);
         LogUtil.i(TAG, "FragmentActivity2#onCreate");
         ButterKnife.bind(this);
 
@@ -87,7 +88,7 @@ public class FragmentActivity2 extends AppCompatActivity {
 
         fragmentManager.
                 beginTransaction()
-                .replace(R.id.ll_container, fragment1, "f1")
+                .replace(R.id.fl_container, fragment1, "f1")
                 .commit();
     }
 
@@ -98,7 +99,7 @@ public class FragmentActivity2 extends AppCompatActivity {
         }
 
         fragmentManager.beginTransaction()
-                .replace(R.id.ll_container, fragment2, "f2")
+                .replace(R.id.fl_container, fragment2, "f2")
                 .commit();
     }
 

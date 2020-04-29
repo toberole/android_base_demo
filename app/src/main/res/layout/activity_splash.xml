@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:gravity="center"
-    tools:context=".activity.A_SplashActivity">
+    tools:context=".A_SplashActivity">
 
     <Button
         android:id="@+id/btn_next"

@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base_test.ThreadActivity"/>
+        <activity android:name=".base_test.RecyclerViewActivity"/>
+        <activity android:name=".base_test.ThreadActivity" />
         <activity android:name=".base_test.ViewDragHelper_ViewActivity" />
         <activity android:name=".base_test.LaunchModeActivity2" />
         <activity android:name=".base_test.LaunchModeActivity1" />
@@ -108,7 +109,7 @@
         <activity android:name=".activity.demo0.VoiceLineViewActivity" />
         <activity android:name=".activity.demo0.ScrollRefreshView_XXActivity" />
         <activity
-            android:name=".activity.A_SplashActivity"
+            android:name=".A_SplashActivity"
             android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

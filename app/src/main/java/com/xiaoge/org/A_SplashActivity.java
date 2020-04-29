@@ -1,4 +1,4 @@
-package com.xiaoge.org.activity;
+package com.xiaoge.org;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -7,10 +7,6 @@ import butterknife.OnClick;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.xiaoge.org.Constant;
-import com.xiaoge.org.R;
-import com.xiaoge.org.TestIndex;
 
 public class A_SplashActivity extends AppCompatActivity {
     private void startNextPage() {
