@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base_test.MyListViewActivity"></activity>
+        <activity android:name=".base_test.ViewDoubleBufferActivity"></activity>
+        <activity android:name=".base_test.MyListViewActivity" />
         <activity android:name=".base_test.ListViewActivity" />
         <activity android:name=".base_test.SurfaceViewActivity" />
         <activity android:name=".base_test.ViewTestActivity" />
