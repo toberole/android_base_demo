@@ -6,6 +6,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 public class A_SplashActivity extends AppCompatActivity {
@@ -31,7 +32,13 @@ public class A_SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
-        ActivityCompat.requestPermissions(this, Constant.PS, 1000);
+        for (String p : Constant.PS) {
+            int ret = ActivityCompat.checkSelfPermission(this, p);
+            if (PackageManager.PERMISSION_GRANTED != ret) {
+                ActivityCompat.requestPermissions(this, Constant.PS, 1000);
+                break;
+            }
+        }
     }
 
     @OnClick(R.id.btn_next)

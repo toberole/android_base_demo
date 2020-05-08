@@ -10,7 +10,6 @@ import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.xiaoge.org.R
-import com.xiaoge.org.util.LogUtil
 import kotlinx.android.synthetic.main.activity_list_view2.*
 
 class ListViewActivity : AppCompatActivity() {
