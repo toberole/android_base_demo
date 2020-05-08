@@ -40,6 +40,7 @@ import com.xiaoge.org.base_test.ActivityLifeTest2;
 import com.xiaoge.org.base_test.DialogActivityLife;
 import com.xiaoge.org.base_test.DispatchTouchEventActivity;
 import com.xiaoge.org.base_test.LaunchModeActivity1;
+import com.xiaoge.org.base_test.ListViewActivity;
 import com.xiaoge.org.base_test.MyViewPagerActivity;
 import com.xiaoge.org.base_test.RecyclerViewActivity;
 import com.xiaoge.org.base_test.ThreadActivity;
@@ -55,6 +56,7 @@ public class TestIndex {
     public static int test_page = 0;
 
     public static Class[] clazzs = new Class[]{//
+            ListViewActivity.class,
             ViewTestActivity.class,
             RecyclerViewActivity.class,
             FragmentActivity3.class,

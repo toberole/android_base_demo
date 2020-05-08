@@ -48,6 +48,11 @@ fun test3() {
     }
 }
 
+fun test4() {
+    var p: Person = Person("hello")
+    var stu: Stu = Stu("huhu")
+}
+
 fun main() {
     println("hello main")
 
