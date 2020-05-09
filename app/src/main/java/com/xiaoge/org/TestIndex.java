@@ -34,20 +34,19 @@ import com.xiaoge.org.activity.demo0.DrawActivity;
 import com.xiaoge.org.activity.demo0.MainActivity;
 import com.xiaoge.org.activity.demo0.SinLineViewActivity;
 import com.xiaoge.org.activity.demo0.TestServiceActivity;
-import com.xiaoge.org.base_test.ActivityLifeTest;
 import com.xiaoge.org.base_test.ActivityLifeTest1;
 import com.xiaoge.org.base_test.ActivityLifeTest2;
 import com.xiaoge.org.base_test.DialogActivityLife;
 import com.xiaoge.org.base_test.DispatchTouchEventActivity;
 import com.xiaoge.org.base_test.LaunchModeActivity1;
 import com.xiaoge.org.base_test.ListViewActivity;
+import com.xiaoge.org.base_test.MyLRUCacheActivity;
 import com.xiaoge.org.base_test.MyViewPagerActivity;
 import com.xiaoge.org.base_test.RecyclerViewActivity;
 import com.xiaoge.org.base_test.ThreadActivity;
 import com.xiaoge.org.base_test.ViewDoubleBufferActivity;
 import com.xiaoge.org.base_test.ViewDragHelper_ViewActivity;
 import com.xiaoge.org.base_test.ViewTestActivity;
-import com.xiaoge.org.kotlin.demo.MyTest;
 import com.xiaoge.org.lifecycle.LifecycleActivity;
 import com.xiaoge.org.activity.kotlin.DemoKotlinActivity_1;
 import com.xiaoge.org.activity.kotlin.HelloKotlinActivity;
@@ -57,6 +56,7 @@ public class TestIndex {
     public static int test_page = 0;
 
     public static Class[] clazzs = new Class[]{//
+            MyLRUCacheActivity.class,
             ViewDoubleBufferActivity.class,
             ListViewActivity.class,
             ViewTestActivity.class,
@@ -78,7 +78,6 @@ public class TestIndex {
             com.xiaoge.org.activity.demo1.ConstraintlayoutActivity.class,
             FragmentActivity2.class
     };
-
 
     public static Class[] clazzs1 = new Class[]{//
             AccessibilityActivity.class,

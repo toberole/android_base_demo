@@ -37,6 +37,8 @@ android {
 //                arguments "-DANDROID_STL=c++_shared"
             }
         }
+
+        multiDexEnabled true
     }
 
     lintOptions {
@@ -77,8 +79,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
 
+    implementation 'androidx.multidex:multidex:2.0.0'
+
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    // https://mvnrepository.com/artifact/androidx.asynclayoutinflater/asynclayoutinflater
     implementation group: 'androidx.asynclayoutinflater', name: 'asynclayoutinflater', version: '1.0.0'
 
     // navigation
@@ -120,7 +123,7 @@ dependencies {
     // 反射
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     // 协程
-    compile group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-android', version: '1.2.2'
+    implementation group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-android', version: '1.2.2'
 
     // 使用apt
     annotationProcessor project(path: ':apt_processor')

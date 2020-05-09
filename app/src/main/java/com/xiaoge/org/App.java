@@ -2,6 +2,7 @@ package com.xiaoge.org;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Process;
 import android.util.Log;
@@ -29,19 +30,16 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import androidx.annotation.Nullable;
+import androidx.multidex.MultiDex;
 
 public class App extends Application implements Application.ActivityLifecycleCallbacks, Window.Callback {
     public static final String TAG = "app-xxx";
     public static int count = 0;
 
     @Override
-    public void onTerminate() {
-        super.onTerminate();
-    }
-
-    @Override
-    public void onTrimMemory(int level) {
-        super.onTrimMemory(level);
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     @Override
@@ -68,6 +66,16 @@ public class App extends Application implements Application.ActivityLifecycleCal
     private void init() {
         File file = new File(Constant.TEMP_DIR);
         if (!file.exists()) file.mkdirs();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
     }
 
     @Override
