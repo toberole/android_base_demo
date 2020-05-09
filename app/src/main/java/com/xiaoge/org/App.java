@@ -69,16 +69,6 @@ public class App extends Application implements Application.ActivityLifecycleCal
     }
 
     @Override
-    public void onTerminate() {
-        super.onTerminate();
-    }
-
-    @Override
-    public void onTrimMemory(int level) {
-        super.onTrimMemory(level);
-    }
-
-    @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
         Log.i(TAG, "App#onActivityCreated: " + activity.getClass().getSimpleName());
     }
@@ -91,7 +81,6 @@ public class App extends Application implements Application.ActivityLifecycleCal
     @Override
     public void onActivityResumed(Activity activity) {
         Log.i(TAG, "App#onActivityResumed: " + activity.getClass().getSimpleName());
-
         ViewGroup rootView = (ViewGroup) activity.getWindow().getDecorView();
         // 当动态添加view的时候也可以做到点击代理的替换
         ViewTreeObserver viewTreeObserver = rootView.getViewTreeObserver();
@@ -117,7 +106,6 @@ public class App extends Application implements Application.ActivityLifecycleCal
     @Override
     public void onActivityStopped(Activity activity) {
         Log.i(TAG, "App#onActivityStopped: " + activity.getClass().getSimpleName());
-
         // activity.getWindow().getDecorView().getViewTreeObserver().removeOnGlobalLayoutListener();
     }
 
@@ -187,7 +175,6 @@ public class App extends Application implements Application.ActivityLifecycleCal
 
     @Override
     public boolean dispatchGenericMotionEvent(MotionEvent event) {
-
         return false;
     }
 
@@ -292,6 +279,16 @@ public class App extends Application implements Application.ActivityLifecycleCal
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
     }
 
     private class OnClickListenererProxy implements View.OnClickListener {
