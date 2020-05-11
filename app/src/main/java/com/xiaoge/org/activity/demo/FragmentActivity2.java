@@ -2,7 +2,6 @@ package com.xiaoge.org.activity.demo;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import com.xiaoge.org.R;
 import com.xiaoge.org.fragment.Fragment1;
