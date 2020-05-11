@@ -54,7 +54,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
 
         init();
 
-        Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
 
         CrashHandler.getInstance().init(this);
         //CrashReport.initCrashReport(getApplicationContext(), "ff76ba0cbd", true);
