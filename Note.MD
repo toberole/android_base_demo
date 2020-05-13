@@ -29,6 +29,14 @@ FileProvider:
     external-files-path对应 ContextCompat.getExternalFilesDirs() 获取到的目录。
     external-cache-path对应 ContextCompat.getExternalCacheDirs() 获取到的目录。
     
+当加载资源文件夹下面的图片时，图片占用的内存为：
+占用的内存 = width * height * nTargetDensity/inDensity * nTargetDensity/inDensity * 一个像素所占的内存
+nTargetDensity是屏幕的密度，inDensity是图片所在资源文件夹所对应的密度
+计算公式：
+对资源文件图片：width * height * nTargetDensity/inDensity * nTargetDensity/inDensity * 一个像素所占的内存；
+别的资源图片：width * height * 一个像素所占的内存；
 
-
-
+Bitmap的压缩
+Bitmap.compress()，质量压缩，不会对内存产生印象；
+BitmapFactory.Options.inSampleSize，内存压缩；
+inSampleSize的比对获取；

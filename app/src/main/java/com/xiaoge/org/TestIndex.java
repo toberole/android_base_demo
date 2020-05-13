@@ -37,6 +37,7 @@ import com.xiaoge.org.activity.demo0.TestServiceActivity;
 import com.xiaoge.org.base_test.AcousticEchoCancelerActivity;
 import com.xiaoge.org.base_test.ActivityLifeTest1;
 import com.xiaoge.org.base_test.ActivityLifeTest2;
+import com.xiaoge.org.base_test.AnimationActivity;
 import com.xiaoge.org.base_test.DialogActivityLife;
 import com.xiaoge.org.base_test.DispatchTouchEventActivity;
 import com.xiaoge.org.base_test.LaunchModeActivity1;
@@ -56,7 +57,10 @@ import com.xiaoge.org.navigation.NavigationActivity;
 public class TestIndex {
     public static int test_page = 0;
 
+
+
     public static Class[] clazzs = new Class[]{//
+            AnimationActivity.class,
             AcousticEchoCancelerActivity.class,
             MyLRUCacheActivity.class,
             ViewDoubleBufferActivity.class,

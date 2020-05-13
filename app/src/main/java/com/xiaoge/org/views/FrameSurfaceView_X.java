@@ -48,6 +48,11 @@ public class FrameSurfaceView_X extends BaseSurfaceView {
         // 定义解析Bitmap参数为可变类型 这样才能复用Bitmap
         options = new BitmapFactory.Options();
         options.inMutable = true;
+
+        frameBitmap.getAllocationByteCount();
+        frameBitmap.getByteCount();
+
+
     }
 
     public void setDuration(int duration) {
@@ -78,13 +83,6 @@ public class FrameSurfaceView_X extends BaseSurfaceView {
         dstRect.set(0, 0, getWidth(), getHeight());
     }
 
-    protected int getDefaultWidth() {
-        return defaultWidth;
-    }
-
-    protected int getDefaultHeight() {
-        return defaultHeight;
-    }
 
     @Override
     protected void onFrameDrawFinish() {
@@ -114,7 +112,6 @@ public class FrameSurfaceView_X extends BaseSurfaceView {
 
     private void drawOneFrame(Canvas canvas) {
         frameBitmap = decodeOriginBitmap(getResources(), pics.get(bitmapIndex), options);
-
         //复用上一帧Bitmap的内存
         options.inBitmap = frameBitmap;
         canvas.drawBitmap(frameBitmap, srcRect, dstRect, paint);
@@ -149,5 +146,13 @@ public class FrameSurfaceView_X extends BaseSurfaceView {
 
     private Bitmap decodeOriginBitmap(Resources resources, Integer id, BitmapFactory.Options options) {
         return BitmapFactory.decodeResource(resources, id, options);
+    }
+
+    protected int getDefaultWidth() {
+        return defaultWidth;
+    }
+
+    protected int getDefaultHeight() {
+        return defaultHeight;
     }
 }
