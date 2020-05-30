@@ -1,4 +1,9 @@
 include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  'flutter_module/.android/include_flutter.groovy'
+))
 include ':baselib'
 include ':exp_other'
 include ':xxipc'
@@ -11,3 +16,6 @@ include ':maven'
 include ':media'
 include ':dagger'
 include ':abi_test'
+
+include ':flutter_module'
+include ':android_flutter_mix'

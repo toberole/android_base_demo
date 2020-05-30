@@ -70,7 +70,6 @@ android {
         }
     }
 
-    // 支持java8
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -139,6 +138,7 @@ dependencies {
     compile project(path: ':anno_apt_apis')
     compile project(path: ':baselib')
     compile project(path: ':media')
+    implementation project(path: ':flutter')
 }
 
 

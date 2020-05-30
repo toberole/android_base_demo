@@ -6,6 +6,9 @@ import android.os.Looper
 import android.os.Message
 import android.util.ArrayMap
 import android.util.SparseArray
+import java.util.concurrent.LinkedBlockingDeque
+import java.util.concurrent.ThreadPoolExecutor
+import java.util.concurrent.TimeUnit
 
 class Test {
     fun test() {
@@ -22,6 +25,9 @@ class Test {
         var ctx: Context? = null
         ctx?.getSharedPreferences("", Context.MODE_PRIVATE)
 
+        var threadPoolExecutor = ThreadPoolExecutor(1, 1, 1, TimeUnit.MINUTES, LinkedBlockingDeque())
+        threadPoolExecutor.execute({
 
+        })
     }
 }

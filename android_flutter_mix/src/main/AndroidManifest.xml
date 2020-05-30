@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zw.android_flutter_mix">
+
+    <application
+        android:label="android_flutter_mix"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.sogou.speech.pingan.android_flutter_mix.activity.demo1.FirstFlutterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -265,7 +265,10 @@ JNIEXPORT void JNICALL Data_test5_14_11
         jstring errormsg = env->NewStringUTF("hello error");
         // 错误写法直接使用"hello error"
         // JNI DETECTED ERROR IN APPLICATION: use of deleted global reference
-        // "hello error" 是在 native C++栈上开辟的内存 「jni会用"全局引用变量-> 引用=指针"指向它」 方法结束栈内存就释放 全局引用变量也删除了
+        // VM tries to interpret the passed const char* as a global reference to a java.lang.String.
+        // But it can't find it, so error.
+        // "hello error" 是在 native C++栈上开辟的内存
+        // java层代码不能直接操作使用native层的内存，必须用jni桥梁提供的函数NewStringUTF转化为java可以使用的
         // env->CallVoidMethod(jcb, onError_id, -1, "hello error");
         env->CallVoidMethod(jcb, onError_id, -1, errormsg);
         // DeleteLocalRef 相当于引用计数减1
