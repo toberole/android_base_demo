@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".android_flutter_mix.FirstFlutterActivity"></activity>
+        <activity android:name=".jni.JNI_Example_Activity"></activity>
+        <activity android:name=".android_flutter_mix.FirstFlutterActivity" />
         <activity android:name=".android_flutter_mix.SecondNativeActivity" />
         <activity android:name=".android_flutter_mix.FirstNativeActivity" />
         <activity android:name=".base_test.AnimationActivity" />

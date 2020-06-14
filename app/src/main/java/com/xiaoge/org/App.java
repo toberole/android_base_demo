@@ -313,4 +313,8 @@ public class App extends Application implements Application.ActivityLifecycleCal
             Log.i(TAG, "OnClickListenererProxy#preClicked");
         }
     }
+
+    static {
+        System.loadLibrary("native-lib");
+    }
 }

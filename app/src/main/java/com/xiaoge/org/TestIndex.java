@@ -49,6 +49,7 @@ import com.xiaoge.org.base_test.ThreadActivity;
 import com.xiaoge.org.base_test.ViewDoubleBufferActivity;
 import com.xiaoge.org.base_test.ViewDragHelper_ViewActivity;
 import com.xiaoge.org.base_test.ViewTestActivity;
+import com.xiaoge.org.jni.JNI_Example_Activity;
 import com.xiaoge.org.lifecycle.LifecycleActivity;
 import com.xiaoge.org.activity.kotlin.DemoKotlinActivity_1;
 import com.xiaoge.org.activity.kotlin.HelloKotlinActivity;
@@ -57,9 +58,8 @@ import com.xiaoge.org.navigation.NavigationActivity;
 public class TestIndex {
     public static int test_page = 0;
 
-
-
     public static Class[] clazzs = new Class[]{//
+            JNI_Example_Activity.class,
             AnimationActivity.class,
             AcousticEchoCancelerActivity.class,
             MyLRUCacheActivity.class,
